@@ -19,7 +19,7 @@ test_script:
         Import-Module platyPS
         Import-Module ./Greet.psm1
         $before = ((Get-ChildItem ./docs -Recurse | Measure-Object -Property Length -Sum -ErrorAction Stop).Sum)
-        Update-MarkdownHelp -Path ./docs -LogPath
+        Update-MarkdownHelp -Path ./docs
         $after = ((Get-ChildItem ./docs -Recurse | Measure-Object -Property Length -Sum -ErrorAction Stop).Sum)
         if($before -ne $after){
            write-host "Failure" -ForegroundColor red
