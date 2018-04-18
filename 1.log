@@ -1,0 +1,30 @@
+﻿
+---- UPDATING Cmdlet : get-name ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : get-name ----
+
+
+---- UPDATING Cmdlet : New-Greeting ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+	Parameter Updated: Greeting
+		Position updated from Named to 
+
+---- COMPLETED UPDATING Cmdlet : New-Greeting ----
+
+
