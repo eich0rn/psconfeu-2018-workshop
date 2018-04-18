@@ -18,11 +18,8 @@ test_script:
         # In other words, if Update-MarkdownHelp changes the markdown.
         Import-Module platyPS
         Import-Module ./Greet.psm1
-        $before = ((Get-ChildItem ./docs -Recurse | Measure-Object -Property Length -Sum -ErrorAction Stop).Sum)
         Update-MarkdownHelp -Path ./docs
-        $after = ((Get-ChildItem ./docs -Recurse | Measure-Object -Property Length -Sum -ErrorAction Stop).Sum)
-        if($before -ne $after){
-           write-host "Failure" -ForegroundColor red
-        }else{
-           write-host "Success" -ForegroundColor green
-        }        
+        $diff = git diff
+        if($diff){
+            throw "Help is not up to date : $diff"
+        }
